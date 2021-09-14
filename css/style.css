@@ -1,0 +1,203 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+.logo {
+    max-width: 100px;
+}
+.titulo {
+    text-align: center;
+}
+.header {
+    min-height: 50vh;
+    background-image: url(../img/perroHeader.jpg);
+    background-position: 40% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navegacion {
+    background-color: black;
+    position: relative;
+}
+
+.navegacion .carrito {
+    position: absolute;
+    top: .8rem;
+    right: 7rem;
+}
+
+.navegacion a, a {
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.navegacion a:hover {
+    background-color: #c9c84a;
+    color: black;
+}
+img {
+    max-width: 100%;
+}
+
+.imagen-card {
+    width: 10rem;
+    height: 10rem;
+}
+
+span .rojo {
+    color: red;
+}
+
+.mainContactanos {
+    min-height: 50vh;
+}
+
+.informacion {
+    background-color: #c9c84a;
+    color: white;
+    font-size: 1.4rem;
+}
+.informacion p {
+    margin: 0 0 .5rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+.imagen1,
+.imagen2, .mapa {
+    text-align: center;
+}
+.mascotas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+.mascotas .mascota {
+    flex: 0 1 calc(50% - 1rem);
+    border: 1px solid #d9d9d9;
+    margin-bottom: 1rem;
+  }
+.mascotas .mascota .imagen-mascota {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    .mascotas .mascota {
+      flex: 0 1 calc(33% - 1rem);
+    }
+  }
+ @media only screen and (min-width: 1024px) {
+.mascotas .mascota {
+      flex: 0 1 calc(25% - 1rem);
+    }
+  }
+  
+.info-mascota {
+    padding: 1rem;
+  }
+.info-mascota h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+.info-mascota .precio {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.info-mascota .boton {
+    background-color: #2d1d74;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+form {
+      background-color: #2d1d74;
+      width: 50%;
+      color: white;
+      margin: 3rem;
+      padding: 1.5rem;
+  }
+fieldset {
+      border: none;
+      padding: 3rem;
+  }
+
+fieldset div {
+    padding: .5rem;
+}
+.footer {
+    background-color: #c9c84a;
+    padding-top: 3rem;
+    text-align: center;
+}
+.footer a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #525252;
+    margin-bottom: .5rem;
+}
+.copyright {
+    color: white;
+    background-color: #282828;
+    margin: 3rem 0 0 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+/** Grid aqui**/
+
+.navegacion nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media screen and (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: minmax(100px, max-content) auto minmax(100px, max-content);
+        grid-template-rows: repeat(4, auto);
+        gap: 1rem;
+    }
+    .titulo {
+        grid-column: 1 / 4;
+    }
+    .informacion {
+        grid-row: 2 / 3;
+    }
+    .imagen1 {
+        grid-row: 3 / 4;
+        grid-column: 3 /  4;
+    }
+    .imagen2 {
+        grid-row: 4 / 5;
+    }
+    .entrada {
+        grid-column: 2 / 3;
+        grid-row: 2 / 5;
+    }
+}
+
+.footer .contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
